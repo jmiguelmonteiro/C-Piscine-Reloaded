@@ -6,14 +6,14 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 12:38:40 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/04 14:54:02 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/04 15:48:41 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
-
+/* 
 void	ft_putstr(char *str)
 {
 	while (*str != '\0')
@@ -39,7 +39,7 @@ void	ft_putnbr(int nb)
 	c = (nb % 10) + '0';
 	write(1, &c, 1);
 }
-
+ */
 void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int	i;
