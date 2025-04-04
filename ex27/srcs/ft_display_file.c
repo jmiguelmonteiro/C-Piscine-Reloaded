@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 16:27:41 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/04 18:53:37 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/04 19:45:58 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,11 @@ bool	process_file(char *file)
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		return (false);
-	bytes_read = read(fd, content, 254);
+	bytes_read = read(fd, content, 1);
 	while (bytes_read > 0)
 	{
-		content[bytes_read] = '\0';
-		ft_putstr(content);
-		bytes_read = read(fd, content, 254);
+		write(1, content, bytes_read);
+		bytes_read = read(fd, content, 1);
 	}
 	close(fd);
 	return (true);
